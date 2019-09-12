@@ -1,0 +1,52 @@
+﻿<div class="row ">
+    <div class="col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Add Money </h1>
+            </div>
+            <div class="panel-body">
+               <div class="row" *ngIf="messages && messages.length">
+                    
+                    <div class="col-xs-12">
+                        <div class="alert alert-warning">
+                            <ul>
+                               <li *ngFor="let msg of messages">
+                                    {{msg}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+             </div>
+                    <div class="form-group">
+                        <label for="balance">Enter Balance</label>
+                        <input type="number"
+                               id="balance"
+                               name="balance"
+                               [(ngModel)]="user.balance"
+                               #balance="ngModel"
+                               class="form-control" />
+
+                    </div>
+
+                    <!--<div class="form-group">
+
+          <input type="hidden"
+               id="uniqueID"
+               name="uniqueID"
+               [(ngModel)]="uniqueID"
+
+               class="form-control" />
+        </div>-->
+
+                    <div class="panel-footer">
+                        <button formnovalidate="formnovalidate"
+                                class="btn btn-sm btn-primary"
+                                (click)="AddMoney()">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;Add Money
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+</div>
+    </div>

@@ -1,0 +1,10 @@
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\utkarshgoyal\source\repos\Casino\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

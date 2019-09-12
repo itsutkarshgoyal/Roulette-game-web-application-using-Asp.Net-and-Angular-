@@ -1,0 +1,195 @@
+﻿<div *ngIf="name">
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color: darkgreen;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar">Roulette</span>
+            </button>
+            
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!--<li><a href="Home/Index" type="button">Home</a></li>
+    <li><a href="/User/UserList" type="button">User List</a></li>
+
+    <li *ngIf="role==null"><a href="Register/Login" type="button">Login</a></li>
+
+
+    <li></li>-->
+                <li style="padding:5px;color:aliceblue"><h4>Roulette</h4></li>
+            </ul>
+            <ul style="float:right" class="nav navbar-nav">
+                <li style="padding:5px"><h4 style="color:aliceblue">Welcome {{name}} !!</h4></li>
+                <li style="padding:5px"><h4 style="color:aliceblue">You have {{currentBalance}} balance</h4></li>
+                <li style="padding:8px"><button class="btn btn-danger" (click)="Exit()">Exit</button></li>
+            </ul>
+           
+        </div>
+
+    </div>
+</div>
+
+
+<style>
+    #holder {
+        /*//position: absolute;*/
+        width: 100%;
+        height: 100%;
+    }
+
+        #holder img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+</style>
+<body>
+   
+    <div id="holder">
+        <img src="../Content/images/playRoulette.png">
+    </div>
+
+</body>
+
+<form #productForm="ngForm">
+    
+    <div class=" form-inline" style="text-align: center">
+        <div class="form-group">
+            <label for="1st12" style="padding:20px"> 1st 12</label>
+            <input id="1st12"
+                   name="1st12"
+                   type="number"
+                   class="form-control"
+                   style="width:100px"
+                   autofocus="autofocus"
+                   [(ngModel)]="roulette.one"
+                   #roulette.one="ngModel" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label for="2nd12" style="padding:20px">
+                2nd 12
+            </label>
+            <input id="2nd12"
+                   name="number"
+                   type="number"
+                   style="width:100px"
+                   [(ngModel)]="roulette.two"
+                   #roulette.two="ngModel"
+                   class="form-control" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label for="3rd12" style="padding:20px">
+                3rd 12
+            </label>
+            <input id="3rd12"
+                   type="number"
+                   name="3rd12"
+                   style="width:100px"
+                   [(ngModel)]="roulette.three"
+                   #roulette.three="ngModel"
+                   class="form-control" />
+        </div>
+    </div>
+    <div class=" form-inline" style="text-align: center">
+        <div class="form-group">
+            <label for="0" style="padding:35px"> 0</label>
+            <input id="0"
+                   name="0"
+                   type="number"
+                   class="form-control"
+                   [(ngModel)]="roulette.zero"
+                   #roulette.zero="ngModel"
+                   style="width:100px"
+                   autofocus="autofocus" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label for="1to18" style="padding:20px">
+                1 to 18
+            </label>
+            <input id="1to18"
+                   name="1to18"
+                   type="number"
+                   style="width:100px"
+                   [(ngModel)]="roulette.four"
+                   #roulette.four="ngModel"
+                   class="form-control" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label for="19to36" style="padding:15px">
+                19 to 36
+            </label>
+            <input id="19to36"
+                   type="number"
+                   name="19to36"
+                   [(ngModel)]="roulette.five"
+                   #roulette.five="ngModel"
+                   style="width:100px"
+                   class="form-control" />
+        </div>
+
+    </div>
+    <div class=" form-inline" style="text-align: center">
+        <div class="form-group">
+            <label for="even" style="padding:29px"> Even</label>
+            <input id="even"
+                   name="even"
+                   type="number"
+                   class="form-control"
+                   [(ngModel)]="roulette.even"
+                   #roulette.even="ngModel"
+                   style="width:100px"
+                   autofocus="autofocus" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label for="odd" style="padding:30px">
+                Odd
+            </label>
+            <input id="odd"
+                   name="number"
+                   type="number"
+                   class="form-control"
+                   [(ngModel)]="roulette.odd"
+                   #roulette.odd="ngModel"
+                   style="width:100px" />
+        </div>
+        <div class="form-group" style="text-align: center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button formnovalidate="formnovalidate"
+                    class="btn btn-sm btn-primary" style="width:170px"
+                    (click)="Play()">
+                <i class="glyphicon glyphicon-apple"></i> &nbsp;Play
+            </button>
+        </div>
+
+    </div>
+
+
+
+</form>
+               
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>

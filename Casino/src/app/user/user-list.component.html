@@ -1,0 +1,91 @@
+﻿<h2>User List</h2>
+
+<div class="row ">
+    <div class="col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Search for Users</h1>
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="UserName">User Name</label>
+                    <input type="text"
+                           id="searchUserName"
+                           name="searchUserName"
+                           [(ngModel)]="searchEntity.Name"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Contact</label>
+                    <input type="text"
+                           id="searchMobile"
+                           name="searchMobile"
+                           [(ngModel)]="searchEntity.mobile"
+                           class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="text"
+                           id="searchEmail"
+                           name="searchEmailName"
+                            [(ngModel)]="searchEntity.email"
+                           class="form-control" />
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button formnovalidate="formnovalidate"
+                        class="btn btn-sm btn-primary"
+                        (click)="search()">
+                    <i class="glyphicon glyphicon-search"></i>&nbsp;Search
+                </button>
+                <!--<button formnovalidate="formnovalidate"
+                        class="btn btn-sm btn-primary"
+                        (click)="resetSearch()">
+                    <i class="glyphicon  glyphicon-share-alt"></i>
+                    &nbsp;Reset
+                </button>
+                <button  class="btn btn-sm btn-primary"
+                        (click)="add()">
+                    <i class="glyphicon glyphicon-share-alt"></i>
+                    &nbsp; Add New User
+                </button>-->
+            </div>
+        </div>
+    </div>
+ </div>
+
+<div class="row" *ngIf="users && users.length">
+    <div class="col-xs-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+
+                        <td><b>Customer Name</b></td>
+                        <td><b>Date Of Birth</b></td>
+                        <td><b>Contact</b></td>
+                        <td><b>Email</b></td>
+                        <td><b>Balance</b></td>
+                        <td><b>Recharge</b></td>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+
+                        <td>{{user.name}}</td>
+                        <td>{{user.date | date}}</td>
+                        <td>{{user.mobile}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.balance}}</td>
+                 
+                        <td> <button class="glyphicon glyphicon-plus" id={{user.uniqueID}} (click)="Recharge(user.uniqueID)"></button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

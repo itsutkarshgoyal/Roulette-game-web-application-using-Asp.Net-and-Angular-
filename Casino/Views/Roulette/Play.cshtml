@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Play";
+    Layout = "~/Views/Shared/_Login_Layout.cshtml";
+}
+<base href="/">
+
+<div class="row">
+    <div class="col-xs-12">
+        <ptc-app>
+            Loading User Information.....
+        </ptc-app>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="/node_modules/core-js/client/shim.min.js"></script>
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/src/systemjs.config.js"></script>
+    <script>
+        System.import('/src/main.js').catch(function (err) { console.error(err); });
+    </script>
+    <script type="text/javascript">
+        angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+
+    </script>
+}
+

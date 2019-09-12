@@ -1,0 +1,9 @@
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\Shared.dll
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\Shared.pdb
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\DataAccessLayer.dll
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\EntityFramework.dll
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\DataAccessLayer.pdb
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\bin\Debug\EntityFramework.xml
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\obj\Debug\Shared.dll
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\obj\Debug\Shared.pdb
+C:\Users\utkarshgoyal\source\repos\Casino\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
